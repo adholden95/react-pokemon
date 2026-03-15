@@ -23,7 +23,7 @@ function App() {
         }));
 
         setChars(pkmnWithCatch);
-      } catch (err) {
+      } catch (error) {
         setError("Error fetching data");
       }
     };
@@ -54,7 +54,7 @@ function App() {
 
       <HideCaught hideCaught={hideCaught} onToggle={handleHideToggle} />
 
-      <div className="grid grid-cols-4 lg:grid-cols-7 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 md:gap-4">
         {displayedChars.map((char) => (
           <Card key={char.name} char={char} onToggle={handleToggle} />
         ))}
